@@ -9,4 +9,3 @@ button.addEventListener("click", ()=>{
         fenster.style.backgroundColor = colorInput.value;
     }
 })
-
