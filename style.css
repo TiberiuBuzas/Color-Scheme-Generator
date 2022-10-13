@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;900&display=swap');
+
+
+/*================== VARIABLES CSS ==================*/
+:root{
+    /* Colors */
+    --background-color: #E8EBF3;
+    --btnColor: #134CDE;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background-color: var(--background-color);
+    overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+}
+
+.navBar{
+  height: 30vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+.inputColorCard{
+  width: 150px;
+  height: 200px;
+  background-color: #fff;
+  box-shadow: 1em 1em 1em rgba(0, 0, 0, .25);
+/*   margin: 0 200px;
+ */  padding: 0;
+  text-align: center;
+}
+.inputColorCard h1 {
+  font-weight: 600;
+  font-size: 2rem;
+  padding-top: 5px;
+}
+
+input[type=color]{
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: 0;
+  width: 150px;
+  height: 135px;
+  cursor: pointer;
+  
+}
+/*======= Copied from Codepen Lee Martin =========*/
+*:focus{
+  border-radius: 0;
+  outline: none;
+}
+
+::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+::-webkit-color-swatch{
+  border: 0;
+  border-radius: 0;
+}
+
+::-moz-color-swatch,
+::-moz-focus-inner{
+  border: 0;
+}
+
+::-moz-focus-inner{
+  padding: 0;
+}
+
+
+
+#schemes{
+  width: 300px;
+  height: 50px;
+  text-align: center;
+  font-weight: 900;
+  border-radius: 10px;
+}
+
+
+/*==== Generate Button =======*/
+.btn{
+  width: 115px;
+  height: 115px;
+  /* margin-left: 300px; */
+  border: none;
+  background-color: var(--btnColor);
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 50%;
+  transition: .4s ease;
+}
+.btn:hover{
+  cursor: pointer;
+  transform: scale(105%);
+}
+
+
+.colorPallet{
+  height: 70vh;
+  background-color: #134CDE;
+  display: flex;
+}
+
+.color{
+  width: 25%;
+  height: 100%;
+  border-right: 2px solid;
+  border-top: 2px solid;
+  display: flex;
+  align-items: center;
+}
+
+.color .colorCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+  height: 350px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+.colorCard:hover{
+  cursor: pointer;
+  box-shadow: 1em 1em 1em rgba(255, 255, 255, .25);
+}
+
+.colorFenster{
+  width: 200px;
+  height: 200px;
+  background-color: var(--btnColor);
+  align-self: center;
+  margin: 20px 0;
+}
+
+.color:nth-last-child(1){
+  border-right: none;
+} 
+
+/* .colorPallet{
+    display: flex;
+    width: 100%;
+    height: 80%;
+}
+
+.colorPallet .color{
+    width: 25%;
+    height: 100%;
+    border-right: 2px solid;
+    border-top: 2px solid;
+    cursor: pointer;
+}
+.color:nth-last-child(1){
+    border-right: none;
+} */
+
+@media (max-width: 575.98px) {
+  .HideOnMobile {
+    display: none;
+  }
+  .ShowOnMobile {
+    display: initial;
+  }
+}
+
+@media (min-width: 576px) {
+  .HideOnMobile {
+    display: initial;
+  }
+  .ShowOnMobile {
+    display: none;
+  }
+
+  body{
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  /* .inputColorCard{
+    display: flex;
+    width: 80%;
+    height: 200px;
+    background-color: #fff;
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, .25);
+    
+  }
+
+  .mBtn{
+    margin-top: 50px;
+    width: 400px;
+
+  } */
+}

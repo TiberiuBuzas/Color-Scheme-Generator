@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Color Scheme Generator</title>
+</head>
+<body>
+
+    <!-- ================= Small Screen ============= -->
+    <div class="ShowOnMobile">
+
+        <div class="mInputColorCard">
+            <h1>Color</h1>
+            <input type="color" id="mColorInput" value="#FF0000" > 
+        </div>
+
+        <select id="schemes" name="schemes">
+    
+            <option value="monochrome">Monochrome</option>
+            <option value="monochrome-dark">Monochrome-dark</option>
+            <option value="monochrome-light">Monochrome-light</option>
+            <option value="analogic">Analogic</option>
+            <option value="complement">Complement</option>
+            <option value="analogic-complement">Analogic-complement</option>
+            <option value="triad">Triad</option>
+            <option value="quad">Quad</option>
+        </select>
+
+        <br>
+        <button id="btn" class="mBtn">Generate</button>
+
+    </div>
+
+    <!-- ================= Big Screen ============= -->
+    <div class="HideOnMobile">
+        <section class="navBar">
+
+            <div class="inputColorCard">
+                <input type="color" id="colorInput" value="#FF0000" > 
+                <h1>Color</h1>
+            </div>
+                
+            <select id="schemes" name="schemes">
+    
+                <option value="monochrome">Monochrome</option>
+                <option value="monochrome-dark">Monochrome-dark</option>
+                <option value="monochrome-light">Monochrome-light</option>
+                <option value="analogic">Analogic</option>
+                <option value="complement">Complement</option>
+                <option value="analogic-complement">Analogic-complement</option>
+                <option value="triad">Triad</option>
+                <option value="quad">Quad</option> 
+            </select>
+    
+            <button id="btn" class="btn">Generate</button>
+           
+        </section>
+    
+    
+        <section class="colorPallet">
+            <div class="color">
+                <div class="colorCard">
+                    <div class="colorFenster"></div>
+                    <h2>HEX: #1234</h2>
+                    <h2>RGB: (255,255,255)</h2>
+                </div>
+            </div>
+    
+            <div class="color">
+                <div class="colorCard">
+                    <div class="colorFenster"></div>
+                    <h2>HEX: #1234</h2>
+                    <h2>RGB: (255,255,255)</h2>
+                </div>
+            </div>
+    
+            <div class="color">
+                <div class="colorCard">
+                    <div class="colorFenster"></div>
+                    <h2>HEX: #1234</h2>
+                    <h2>RGB: (255,255,255)</h2>
+                </div>
+            </div>
+    
+            <div class="color">
+                <div class="colorCard">
+                    <div class="colorFenster"></div>
+                    <h2>HEX: #1234</h2>
+                    <h2>RGB: (255,255,255)</h2>
+                </div>
+            </div>
+    
+            <div class="color">
+                <div class="colorCard">
+                    <div class="colorFenster"></div>
+                    <h2>HEX: #1234</h2>
+                    <h2>RGB: (255,255,255)</h2>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    
+</body>
+</html>
+
