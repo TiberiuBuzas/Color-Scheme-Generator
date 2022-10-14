@@ -9,3 +9,16 @@ button.addEventListener("click", ()=>{
         fenster.style.backgroundColor = colorInput.value;
     }
 })
+
+
+fetch("https://www.thecolorapi.com", {
+    method: "PUT",
+    body: JSON.stringify({
+        color: colorInput.value
+    }),
+    headers: {
+        'Content-Type': 'application/json'
+    }
+})
+    .then( (response) => response.json())
+    .then( (data) => console.log(data));
