@@ -20,7 +20,8 @@ button.addEventListener("click", ()=>{
                 colorFenster[i].style.backgroundColor = data.colors[i].hex.value;
 
                 hexH2[i].textContent = "HEX: " + data.colors[i].hex.value;
-                rgbH2[i].textContent = "RGB: " + data.colors[i].rgb.value.slice(3);
+                //rgbH2[i].textContent = "RGB: " + data.colors[i].rgb.value.slice(3);
+                rgbH2[i].textContent = data.colors[i].rgb.value;
 
             }
 

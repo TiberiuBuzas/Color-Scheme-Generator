@@ -89,7 +89,8 @@ input[type=color]{
   height: 50px;
   text-align: center;
   font-weight: 900;
-  border-radius: 10px;
+  font-size: 16px;
+  border-radius: 5px;
   box-shadow: .5em .5em 1em rgba(0, 0, 0, .25);
   border: none;
 }
@@ -112,6 +113,7 @@ input[type=color]{
   transform: scale(105%);
 }
 
+/* ============== Color Pallet ========== */
 
 .colorPallet{
   height: 70vh;
@@ -154,6 +156,7 @@ input[type=color]{
   border-right: none;
 } 
 
+/* Small screen width */
 @media (max-width: 1300px){
   body{
     overflow: hidden;
@@ -170,14 +173,27 @@ input[type=color]{
   .color{
     width: 100%;
     height: 20%;
+    position: relative;
   }
 
   .colorCard{
-    height: 175px;
+    height: 100%;
     width: 175px;
   }
+  .color:nth-child(odd) .colorCard{
+    position: absolute;
+    left: 0;
+  }
+  .color:nth-child(even) .colorCard{
+    position: absolute;
+    right: 0;
+  }
+
+
 }
 
+
+/* Smallest screen width */
 @media (max-width: 630px) {
   .navBar{
     flex-direction: column;
@@ -210,9 +226,6 @@ input[type=color]{
   #schemes{
     width: 85%;
     height: 50px;
-    border-radius: 5px;
-    box-shadow: .5em 0.5em 1em rgba(0, 0, 0, .25);
-    border: none;
   }
 
   .btn{
