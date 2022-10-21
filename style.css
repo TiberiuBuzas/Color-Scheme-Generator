@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
-
-/*================== VARIABLES CSS ==================*/
+/*==================== VARIABLES CSS ====================*/
 :root{
     /* Colors */
     --background-color: #E8EBF3;
     --btnColor: #134CDE;
 }
-
-
 
 *{
     margin: 0;
@@ -22,8 +21,11 @@ body{
     text-align: center;
     background-color: var(--background-color);
     overflow: hidden;
-    font-family: 'Kanit', sans-serif;
+    /* font-family: 'Kanit', sans-serif; */
+    font-family: 'Quicksand', sans-serif;
 }
+
+/* ==================== Nav Bar ==================== */
 
 .navBar{
   height: 30vh;
@@ -32,7 +34,7 @@ body{
   align-items: center;
 }
 
-
+/*===== Input Color Card =====*/
 .inputColorCard{
   width: 150px;
   height: 200px;
@@ -42,7 +44,7 @@ body{
   text-align: center;
 }
 .inputColorCard h1 {
-  font-weight: 600;
+  font-weight: 700; 
   font-size: 2rem;
   padding-top: 5px;
 }
@@ -56,7 +58,6 @@ input[type=color]{
   width: 150px;
   height: 135px;
   cursor: pointer;
-  
 }
 /*======= Copied from Codepen Lee Martin =========*/
 *:focus{
@@ -83,7 +84,7 @@ input[type=color]{
 }
 
 
-
+/* ===== Schemes Input ===== */
 #schemes{
   width: 300px; 
   height: 50px;
@@ -96,7 +97,7 @@ input[type=color]{
 }
 
 
-/*==== Generate Button =======*/
+/*===== Generate Button =====*/
 .btn{
   width: 115px;
   height: 115px;
@@ -113,7 +114,7 @@ input[type=color]{
   transform: scale(105%);
 }
 
-/* ============== Color Pallet ========== */
+/* ============================ Color Pallet ======================== */
 
 .colorPallet{
   height: 70vh;
@@ -121,6 +122,7 @@ input[type=color]{
   display: flex;
 }
 
+/* ===== Color Column ===== */
 .color{
   width: 25%;
   height: 100%;
@@ -129,7 +131,12 @@ input[type=color]{
   display: flex;
   align-items: center;
 }
+.color:nth-last-child(1){
+  border-right: none;
+} 
 
+
+/* ===== Color Card ===== */
 .colorCard{
   display: flex;
   flex-direction: column;
@@ -141,8 +148,9 @@ input[type=color]{
 }
 .colorCard:hover{
   cursor: pointer;
-  box-shadow: 1em 1em 1em rgba(255, 255, 255, .25);
+/*box-shadow: 1em 1em 1em rgba(255, 255, 255, .25);*/
 }
+
 
 .colorFenster{
   width: 200px;
@@ -152,16 +160,22 @@ input[type=color]{
   margin: 20px 0;
 }
 
-.color:nth-last-child(1){
-  border-right: none;
-} 
+
+
+
+/* =========================== Media Queries ===========================*/
+
 
 /* Small screen width */
 @media (max-width: 1300px){
   body{
-    overflow: hidden;
+    overflow: auto;
   }
 
+  .inputColorCard{
+    width: 150px;
+    height: 200px;
+  }
   .colorPallet{
     flex-direction: column;
   }
@@ -187,9 +201,43 @@ input[type=color]{
   .color:nth-child(even) .colorCard{
     position: absolute;
     right: 0;
+  }      
+
+  .color{
+    border-top: 1px solid;
+    border-right: none;
   }
 
+  .colorCard{
+    min-width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .colorCard h2{
+    font-size: 16px;
+/*  font-weight: 600;*/    
+    font-weight: 500;
+  }
+}
 
+/* Resize the inputColorCard if the screen height is lower than 850px */
+@media (max-height: 850px){
+  .inputColorCard{
+    width: 150px;
+    height: 170px;
+    margin-bottom: 10px;
+  }
+  .inputColorCard h1 {
+    font-weight: 600;
+    font-size: 1.75rem;
+    padding-top: 2px;
+  }
+  
+  input[type=color]{
+    width: 150px;
+    height: 115px;
+  }
 }
 
 
@@ -238,4 +286,11 @@ input[type=color]{
     transform: none;
   }
 
+  .colorCard{
+    width: 25%;
+  }
+  .colorCard h2{
+    font-size: 13px;
+  }
 }
+
