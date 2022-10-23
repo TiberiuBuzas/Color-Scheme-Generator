@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;400;600;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root{
@@ -15,14 +13,13 @@
     box-sizing: border-box;
 }
 
-body{
+html,body{
     width: 100%;
     height: 100%;
     text-align: center;
     background-color: var(--background-color);
-    overflow: hidden;
-    /* font-family: 'Kanit', sans-serif; */
-    font-family: 'Quicksand', sans-serif;
+    overflow-x: hidden; 
+    font-family: 'Roboto', sans-serif;
 }
 
 /* ==================== Nav Bar ==================== */
@@ -41,12 +38,10 @@ body{
   background-color: #fff;
   box-shadow: 1em 1em 1em rgba(0, 0, 0, .25);
   padding: 0;
-  text-align: center;
 }
 .inputColorCard h1 {
-  font-weight: 700; 
+  font-weight: 500; 
   font-size: 2rem;
-  padding-top: 5px;
 }
 
 input[type=color]{
@@ -58,6 +53,7 @@ input[type=color]{
   width: 150px;
   height: 135px;
   cursor: pointer;
+  margin-bottom: 12px;
 }
 /*======= Copied from Codepen Lee Martin =========*/
 *:focus{
@@ -105,7 +101,7 @@ input[type=color]{
   background-color: var(--btnColor);
   color: #fff;
   font-size: 20px;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: 50%;
   transition: .4s ease;
 }
@@ -146,21 +142,29 @@ input[type=color]{
   margin: 0 auto;
   background-color: #fff;
 }
-.colorCard:hover{
-  cursor: pointer;
-/*box-shadow: 1em 1em 1em rgba(255, 255, 255, .25);*/
-}
-
 
 .colorFenster{
   width: 200px;
   height: 200px;
   background-color: var(--btnColor);
   align-self: center;
-  margin: 20px 0;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  transition: .4s ease;
+}
+.colorFenster:hover{
+  cursor: pointer;
+  transform: scaleY(1.1);
 }
 
-
+.colorCardText{
+  width: 195px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 15px;
+}
 
 
 /* =========================== Media Queries ===========================*/
@@ -168,10 +172,7 @@ input[type=color]{
 
 /* Small screen width */
 @media (max-width: 1300px){
-  body{
-    overflow: auto;
-  }
-
+  
   .inputColorCard{
     width: 150px;
     height: 200px;
@@ -188,12 +189,10 @@ input[type=color]{
     width: 100%;
     height: 20%;
     position: relative;
+    border-top: 1px solid;
+    border-right: none;
   }
 
-  .colorCard{
-    height: 100%;
-    width: 175px;
-  }
   .color:nth-child(odd) .colorCard{
     position: absolute;
     left: 0;
@@ -203,22 +202,23 @@ input[type=color]{
     right: 0;
   }      
 
-  .color{
-    border-top: 1px solid;
-    border-right: none;
-  }
-
   .colorCard{
+    height: 100%;
+    width: 175px;
     min-width: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
   .colorCard h2{
-    font-size: 16px;
-/*  font-weight: 600;*/    
+    font-size: 16px;  
     font-weight: 500;
+    margin: 0 auto;
   }
+
+  .colorCardText{
+    width: 100%;
+  } 
 }
 
 /* Resize the inputColorCard if the screen height is lower than 850px */
@@ -229,14 +229,14 @@ input[type=color]{
     margin-bottom: 10px;
   }
   .inputColorCard h1 {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1.75rem;
-    padding-top: 2px;
   }
   
   input[type=color]{
     width: 150px;
     height: 115px;
+    margin-bottom: 10px;
   }
 }
 
@@ -264,6 +264,7 @@ input[type=color]{
     width: 50%;
     position: absolute;
     right: 0;
+    margin: 0;
   }
 
   .inputColorCard h1{
@@ -289,8 +290,15 @@ input[type=color]{
   .colorCard{
     width: 25%;
   }
+  .colorCardText{
+    width: 90%;
+    margin: 0 auto;
+  }
+
   .colorCard h2{
-    font-size: 13px;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0 auto;
   }
 }
 
