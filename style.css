@@ -18,7 +18,7 @@ html,body{
     height: 100%;
     text-align: center;
     background-color: var(--background-color);
-    overflow-x: hidden; 
+    overflow: hidden; 
     font-family: 'Roboto', sans-serif;
 }
 
@@ -143,7 +143,7 @@ input[type=color]{
   background-color: #fff;
 }
 
-.colorFenster{
+.colorWindow{
   width: 200px;
   height: 200px;
   background-color: var(--btnColor);
@@ -151,10 +151,6 @@ input[type=color]{
   margin-top: 20px;
   margin-bottom: 30px;
   transition: .4s ease;
-}
-.colorFenster:hover{
-  cursor: pointer;
-  transform: scaleY(1.1);
 }
 
 .colorCardText{
@@ -172,7 +168,9 @@ input[type=color]{
 
 /* Small screen width */
 @media (max-width: 1300px){
-  
+  html, body{
+    overflow-y: auto;
+  }
   .inputColorCard{
     width: 150px;
     height: 200px;
@@ -181,7 +179,7 @@ input[type=color]{
     flex-direction: column;
   }
 
-  .colorFenster{
+  .colorWindow{
     display: none;
   }
 
