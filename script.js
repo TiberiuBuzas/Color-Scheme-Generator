@@ -7,7 +7,7 @@ const colorCards = document.getElementsByClassName("colorCard");
 const hexH2 = document.getElementsByClassName("hexH2");
 const rgbH2 = document.getElementsByClassName("rgbH2");
 
-// Set the colors of each column
+// Set the first colors of each column
 colors[0].style.backgroundColor = `${hexH2[0].innerHTML}`;
 colorWindow[0].style.backgroundColor = `${hexH2[0].innerHTML}`;
 
@@ -21,14 +21,14 @@ colors[3].style.backgroundColor = `${hexH2[3].innerHTML}`;
 colorWindow[3].style.backgroundColor = `${hexH2[3].innerHTML}`;
 
 colors[4].style.backgroundColor = `${hexH2[4].innerHTML}`;
-colorWindow[4].style.backgroundColor = `${hexH2[4].innerHTML}`;
+colorWindow[4].style.backgroundColor = `${hexH2[4].innerHTML}`; 
+
 
 
 for(let coloCard of colorCards){
     coloCard.addEventListener("click", (e)=>{
         // copy to Clipboard the textContent of the clicked element
         let text = e.target.textContent;
-        console.log(text);
         navigator.clipboard.writeText(text); 
     })
 }
