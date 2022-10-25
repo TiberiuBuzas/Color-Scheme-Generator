@@ -91,7 +91,9 @@ input[type=color]{
   box-shadow: .5em .5em 1em rgba(0, 0, 0, .25);
   border: none;
 }
-
+#schemes:hover{
+  cursor: pointer;
+}
 
 /*===== Generate Button =====*/
 .btn{

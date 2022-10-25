@@ -33,8 +33,14 @@ for(let coloCard of colorCards){
     })
 }
 
+let clickDisabled = false;
+
 button.addEventListener("click", ()=>{
     
+    if(clickDisabled){
+        return;
+    }
+
     fetch(`https://www.thecolorapi.com/scheme?hex=${colorInput.value.slice(1)}&mode=${schemesInput.value}&count=5`)
         .then( (response) => response.json())
         .then( (data) => {
@@ -49,7 +55,6 @@ button.addEventListener("click", ()=>{
 
             }
             
-
             /* Animate the colorCards with GSAP */
             let durationTime = 2;
             
@@ -66,8 +71,6 @@ button.addEventListener("click", ()=>{
                 }
             } 
 
-            
-                
 
             if(window.innerWidth < 1300){
                 
@@ -90,7 +93,12 @@ button.addEventListener("click", ()=>{
 
             }
             
-        });
-        
+        }); 
+
+    clickDisabled = true;
+
+    setTimeout(()=>{
+        clickDisabled = false;
+    }, 2505)
 })
 
