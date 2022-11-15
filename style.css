@@ -116,7 +116,6 @@ input[type=color]{
 
 .colorPallet{
   height: 70vh;
-  background-color: #134CDE;
   display: flex;
 }
 
@@ -162,6 +161,37 @@ input[type=color]{
   flex-direction: column;
   align-items: flex-start;
   font-size: 15px;
+}
+
+/* ===== Underline hover animation ===== */
+
+.hexH2{
+  margin-bottom: 5px;
+  padding-bottom: 3px;
+}
+.rgbH2{
+  padding-bottom: 5px;
+}
+.underline{
+  cursor: pointer;
+  position: relative;
+}
+.underline::before{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  border-radius: 4px;
+  background-color: #134CDE;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform .3s ease-in-out; 
+}
+.underline:hover::before{
+  transform-origin: left;
+  transform: scaleX(1); 
 }
 
 
@@ -219,6 +249,7 @@ input[type=color]{
   .colorCardText{
     width: 100%;
   } 
+
 }
 
 /* Resize the inputColorCard if the screen height is lower than 850px */
