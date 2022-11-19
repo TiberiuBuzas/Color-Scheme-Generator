@@ -77,17 +77,17 @@ button.addEventListener("click", ()=>{
                 
                 // Animate text to right
                 gsap.from(".animationToRight", {
-                    opacity: 0,
-                    x: -150,
-                    duration: 1.25,
+                    opacity: 1,
+                    x: -200,
+                    duration: 1,
                     ease: "power"
                 })
 
                 // animate text to left
                 gsap.from(".animationToLeft", {
-                    opacity: 0,
-                    x: 150,
-                    duration: 1.25,
+                    opacity: 1,
+                    x: 200,
+                    duration: 1,
                     ease: "power"
                 })
 

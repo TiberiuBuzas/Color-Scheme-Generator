@@ -130,7 +130,7 @@ input[type=color]{
 }
 .color:nth-last-child(1){
   border-right: none;
-} 
+}  
 
 
 /* ===== Color Card ===== */
@@ -171,7 +171,7 @@ input[type=color]{
 }
 .rgbH2{
   padding-bottom: 5px;
-}
+} 
 .underline{
   cursor: pointer;
   position: relative;
