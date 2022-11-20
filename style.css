@@ -55,7 +55,6 @@ input[type=color]{
   cursor: pointer;
   margin-bottom: 12px;
 }
-/*======= Copied from Codepen Lee Martin =========*/
 *:focus{
   border-radius: 0;
   outline: none;

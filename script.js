@@ -6,7 +6,6 @@ const colors = document.getElementsByClassName("color");
 const colorCards = document.getElementsByClassName("colorCard");
 const hexH2 = document.getElementsByClassName("hexH2");
 const rgbH2 = document.getElementsByClassName("rgbH2");
-const beforeElements = document.querySelector("::before");
 
 // Set the first colors of each column
 colors[0].style.backgroundColor = `${hexH2[0].innerHTML}`;
@@ -75,7 +74,7 @@ button.addEventListener("click", ()=>{
 
             if(window.innerWidth < 1300){
                 
-                // Animate text to right
+                // Animate card to right
                 gsap.from(".animationToRight", {
                     opacity: 1,
                     x: -200,
@@ -83,7 +82,7 @@ button.addEventListener("click", ()=>{
                     ease: "power"
                 })
 
-                // animate text to left
+                // animate card to left
                 gsap.from(".animationToLeft", {
                     opacity: 1,
                     x: 200,
