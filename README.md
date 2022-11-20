@@ -3,6 +3,7 @@
 A Color Scheme Generator built with HTML, CSS, JavaScript and The Color API(https://www.thecolorapi.com). 
 <br>Inspired by Scrimba.com.
 <br>Animations are made with GSAP.
+<br>Demo Link: https://tiberiubuzas.github.io/Color-Scheme-Generator/
 
 
 ![colorSchemeGeneratorWebScreenshot](https://user-images.githubusercontent.com/48926984/202877663-f46da6ac-12e1-462e-8189-ccf067fc5c84.png)
