@@ -42,7 +42,14 @@ button.addEventListener("click", ()=>{
     }
 
     fetch(`https://www.thecolorapi.com/scheme?hex=${colorInput.value.slice(1)}&mode=${schemesInput.value}&count=5`)
-        .then( (response) => response.json())
+        .then( (response) => {
+            if(!response.ok){
+                throw Error("Ups.. Something went wrong!");
+            } 
+                            
+            return response.json();
+
+        })
         .then( (data) => {
 
             for(let i = 0; i<colors.length; i++){
@@ -93,6 +100,9 @@ button.addEventListener("click", ()=>{
 
             }
             
+        })
+        .catch( (error) => {
+            console.log(error);
         }); 
 
     clickDisabled = true;
